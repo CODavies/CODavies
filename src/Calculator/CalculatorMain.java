@@ -12,7 +12,7 @@ public class CalculatorMain {
                     What function would you want to perform?
                     Press 1 for addition
                     Press 2 for subtraction
-                    Press 3 for division
+                    Press 3 for division1
                     Press 4 for multiplication
                     Press 5 for sin
                     Press 6 for tan
@@ -24,12 +24,12 @@ public class CalculatorMain {
 
             switch (userOption) {
                 case 1 -> {
-                    int total =0;
-
                     System.out.println("Enter first number");
                     int firstNumber = input.nextInt();
+                    System.out.println("Enter second numbers");
+                    int secondNumber = input.nextInt();
 
-                    System.out.println("Your answer is: " + Calculator.addition(firstNumber));
+                    System.out.println("Your answer is: " + Calculator.addition(firstNumber, secondNumber));
                 }
                 case 2 -> {
                     System.out.println("Enter first number");
@@ -41,8 +41,9 @@ public class CalculatorMain {
                 case 3 -> {
                     System.out.println("Enter first number");
                     int firstNumber = input.nextInt();
-
-                    System.out.println("Your answer is: " + Calculator.division(firstNumber));
+                    System.out.println("Enter second numbers");
+                    int secondNumber = input.nextInt();
+                    System.out.println("Your answer is: " + Calculator.division(firstNumber, secondNumber));
                 }
                 case 4 -> {
                     System.out.println("Enter first number");

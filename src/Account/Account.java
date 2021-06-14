@@ -2,14 +2,16 @@ package Account;
 
 public class Account {
     private double amount;
+    private String firstName, lastName;
 
     public double depositMoney(double deposit) {
-        if (deposit < 0) {
-           return this.amount = 0;
+        if (deposit > 0) {
+           return this.amount += deposit;
         }
-        else
-                return this.amount += deposit;
-
+        else {
+            System.out.println("Insufficient funds");
+            return this.amount = 0;
+        }
         }
 
     public double withdrawMoney(double withdrawAmount) {
@@ -26,11 +28,11 @@ public class Account {
     public double payForUtilityBills(double amountToBuy) {
         if (amountToBuy < amount && amountToBuy > 0) {
             return (this.amount - amountToBuy);
-        } else
+        } else {
+            System.out.println("Insufficient funds");
+
             return this.amount;
-
-
-
+        }
     }
 
     public double transferAmount(double transferAmount) {
@@ -47,7 +49,17 @@ public class Account {
     }
 
 
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
+    public void setLastName(String lastName) {
+        this.lastName=lastName;
+    }
+
+    public String clientsFirstAndLastName() {
+        return firstName + " " +lastName;
+    }
 }
 
 

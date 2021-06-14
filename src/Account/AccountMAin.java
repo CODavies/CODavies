@@ -7,9 +7,13 @@ public class AccountMAin {
         int sentinelValue = 1;
         Account account = new Account();
         Scanner input = new Scanner(System.in);
-        System.out.print("Please input your name: ");
-        String userName = input.next();
-        System.out.println("Welcome to UBA " + userName + "\n");
+        System.out.print("Please input your first name: ");
+        String userFirstName = input.next();
+        System.out.print("Please input your last name: ");
+        String userLastName = input.next();
+        account.setFirstName(userFirstName);
+        account.setLastName(userLastName);
+        System.out.println("Welcome to UBA " + account.clientsFirstAndLastName());
         while (sentinelValue != -1) {
             System.out.println(
                     """
@@ -20,7 +24,6 @@ public class AccountMAin {
                     Press 5 for account balance
                     Press 6 to exit                    
                     """);
-
             int userInput = input.nextInt();
             switch (userInput) {
                 case 1 -> {
@@ -28,15 +31,11 @@ public class AccountMAin {
                     double depositAmountFromUSer = input.nextDouble();
                     System.out.print("Your account balance is: " + account.depositMoney(depositAmountFromUSer) + "\n");
                 }
-
-
                 case 2 -> {
                     System.out.print("PLease input amount you want to withdraw: ");
                     double amountToWithdraw = input.nextDouble();
                     System.out.println(amountToWithdraw + " :has been debited from your account, " + account.withdrawMoney(amountToWithdraw) + "you account new account balance is: " + "\n" );
                 }
-
-
                 case 3 -> {
                     System.out.print("PLease input amount to pay bill: ");
                     double billInputtedByUser = input.nextDouble();
@@ -49,7 +48,9 @@ public class AccountMAin {
                     System.out.println("You have transferred: " + transferAmount +" your account balance is: " + account.transferAmount(transferAmount) + "\n");
                 }
                 case 5 -> System.out.println("Your account balance is: " + account.getBalance());
-                case 6-> sentinelValue = -1;
+                case 6-> { System.out.println("Thank you for banking with us" + account.clientsFirstAndLastName() + " Stay safe");
+                    sentinelValue = -1;
+                }
                 default -> System.out.println("Invalid input, please input a number between 1 - 8" + "\n");
             }
         }

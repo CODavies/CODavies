@@ -22,7 +22,8 @@ Account account;
     }
     @Test
     void accountCanDepositMoney(){
-        assertEquals(4000,account.depositMoney(4000));
+        account.depositMoney(4000);
+        assertEquals(4000,account.getBalance());
 
     }
     @Test
@@ -82,7 +83,13 @@ Account account;
     assertEquals(7700, account.payForUtilityBills(300));
     assertEquals(5935,account.transferAmount(2000));
     assertEquals(6000, account.withdrawMoney(2000));
-//    assertEquals(8000, account.accountBalance());
+    assertEquals(8000, account.getBalance());
+}
+@Test
+    void accountCanSetNameOfClient(){
+        account.setFirstName("Davies");
+        account.setLastName("Chijioke");
+        assertEquals("Davies Chijioke", account.clientsFirstAndLastName());
 }
 }
 

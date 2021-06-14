@@ -13,8 +13,8 @@ public class SalesCommissionCalculator {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter the item you want to purchase (firstItem =1, secondItem =2, thirdItem =3, forthItem=4) enter 5 to exit: ");
         int itemNumber = input.nextInt();
-        while (itemNumber>= 5){
-            System.out.println("The cost of the item is 239.99, enter the number of item you want to purchase: ");
+        while (itemNumber!= 5){
+            System.out.println("Enter the number of item you want to purchase: ");
             int numberOfItem = input.nextInt();
             if (itemNumber == 1) {
                 totalItemsPurchased += (numberOfItem * firstItem);
