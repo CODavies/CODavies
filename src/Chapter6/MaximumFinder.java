@@ -25,7 +25,7 @@ public class MaximumFinder {
                 maximumValue = z;
             return maximumValue;
     }
-    private static  double minimum(double x, double y, double z){
+    private static double minimum(double x, double y, double z){
         double minimumValue = x;
         if (y > minimumValue )
             minimumValue  = y;

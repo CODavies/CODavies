@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class SeparatingDigits {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.printf("Ënter integer you want to separate: ");
+        System.out.print("Ënter integer you want to separate: ");
         int integerInputUserHasEntered = input.nextInt();
         System.out.println("Your number is: " + separatedInteger(integerInputUserHasEntered));
 

@@ -5,10 +5,10 @@ import java.util.Scanner;
 
 public class SalesCommission {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
         int[] salesArrayCounter = new int[9];
         final int WEEKLY_BONUS = 200;
         final double PERCENTAGE_BONUS = 0.09;
+        Scanner input = new Scanner(System.in);
         System.out.print("Enter weekly gross sales: ");
         double grossSales = input.nextDouble();
         while (grossSales != 0) {
@@ -20,6 +20,8 @@ public class SalesCommission {
             System.out.print("Enter weekly gross sales: ");
             grossSales = input.nextInt();
         }
-        System.out.println(Arrays.toString(salesArrayCounter));
+            System.out.println(Arrays.toString(salesArrayCounter));
+
+        }
     }
-}
+

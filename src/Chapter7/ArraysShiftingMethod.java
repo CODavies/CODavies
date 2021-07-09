@@ -9,11 +9,10 @@ public class ArraysShiftingMethod {
         System.out.println(Arrays.toString(myList));
         System.out.println("After shifting, the elements left, moving: " + myList[0] + " and shiting it out,  " + myList[1]);
         for (int i = 1; i < myList.length; i++) {
-
-        myList[i - 1]  = myList[i];
-
+            myList[i - 1] = myList[i];
         }
-
+        int i = 0;
+        myList[myList.length - 2]  = myList[i];
         System.out.println(Arrays.toString(myList));
     }
 

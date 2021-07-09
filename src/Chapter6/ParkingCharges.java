@@ -1,13 +1,11 @@
 package Chapter6;
 
-import java.net.Socket;
 import java.util.Scanner;
 
 public class ParkingCharges {
     final static double MINIMUM_FEE = 2.00;
     final static double ADDITIONAL_FEE = 0.50;
     final static double MAXIMUM_CHARGE = 10.00;
-    int numberOfHoursUserWantsToPark;
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -17,7 +15,7 @@ public class ParkingCharges {
 
     }
 
-    public static double calculateCharges(int numberOfHoursUserWantsToPark) {
+    private static double calculateCharges(int numberOfHoursUserWantsToPark) {
         int hoursParkedByUser = numberOfHoursUserWantsToPark - 3;
         if (hoursParkedByUser < 0) {
             return numberOfHoursUserWantsToPark;
